@@ -23,3 +23,9 @@ The following code was developed and tested on Vertex AI provided by the Google 
 
 - **GPU Type:** NVIDIA L4
 - **Machine Type:** g2-standard-8 (8 vCPU, 4 core, 32 GB Memory)
+
+
+## Note
+
+Testing with high limit on Autogluon produces better results. My top result on kaggle was produced after 7 hours of total runtime.
+The limit is set to 400 in this notebook to produce a similar result although with a slightly lower R2 score.
