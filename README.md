@@ -1,6 +1,8 @@
 ## Requirements
+It is recommended to run this project on a GPU.
 
 Before running the project, ensure you have the following packages installed:
+PlantTraitPrediction.ipynb has a cell which installs the packages for you
 
 - Python 3.7 or later
 - [PyTorch](https://pytorch.org/get-started/locally/)
@@ -20,7 +22,11 @@ Before running the project, ensure you have the following packages installed:
 
 **PlantTraitPrediction.ipynb** contains all the necessary scripts to run the project.
 
-**Note:** You will need to download a `kaggle.json` file and upload it when prompted.
+**Note:** 
+You will need to download a `kaggle.json` file and upload it when prompted.
+This is necessary to download the training data from kaggle.
+
+As an alternative, you can also paste in a folder called 'data' which contains all the data needed for the project.
 
 ## Instructions
 
@@ -28,10 +34,10 @@ Before running the project, ensure you have the following packages installed:
 2. **Run scripts** to download data from Kaggle.
 3. **Run the rest of the cells** to perform the regression task.
 
-## Expected Runtimes
+## Expected Runtimes (Assuming this is run on a L4 GPU)
 
 - **Generating DINO Embeddings:** 8 minutes
-- **Training Autogluon Models:** 40 minutes (400 seconds limit set per trait)
+- **Training Autogluon Models:** 30-40 minutes (400 seconds limit set per trait)
 
 ## Hardware Information
 
@@ -43,5 +49,5 @@ The following code was developed and tested on Vertex AI provided by the Google 
 
 ## Note
 
-Testing with high limit on Autogluon produces better results. My top result on kaggle was produced after 7 hours of total runtime!
-The limit is set to 400 in this notebook to produce a similar result although with a slightly lower R2 score.
+Testing with high limit on Autogluon produces better results. My top result on kaggle was produced after 5 hours of total runtime!
+The limit is set to 400 in this notebook to produce a similar result (≈ 0.46) with a more bearable runtime.
