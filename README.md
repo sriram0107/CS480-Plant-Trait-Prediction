@@ -4,7 +4,7 @@ It is recommended to run this project on a GPU.
 Before running the project, ensure you have the following packages installed:
 PlantTraitPrediction.ipynb has a cell which installs the packages for you
 
-- Python 3.7 or later
+- Python 3.10.14 or later
 - [PyTorch](https://pytorch.org/get-started/locally/)
 - [Lightning](https://lightning.ai/docs/fabric/stable/installation.html)
 - [NumPy](https://numpy.org/install/)
@@ -26,7 +26,7 @@ PlantTraitPrediction.ipynb has a cell which installs the packages for you
 You will need to download a `kaggle.json` file and upload it when prompted.
 This is necessary to download the training data from kaggle.
 
-As an alternative, you can also paste in a folder called 'data' which contains all the data needed for the project.
+As an alternative, you can also paste in a folder called 'data' which contains all the data needed for the project. The first 7 cells can be skipped in this case
 
 ## Instructions
 
@@ -49,5 +49,9 @@ The following code was developed and tested on Vertex AI provided by the Google 
 
 ## Note
 
-Testing with high limit on Autogluon produces better results. My top result on kaggle was produced after 5 hours of total runtime!
-The limit is set to 400 in this notebook to produce a similar result (≈ 0.46) with a more bearable runtime.
+The runtime is highly dependent on the type of machine the code is run on, Autogluon auto detects GPUs and optimizes runtime.
+
+I noticed that the quality of DINO embeddings also depends on the type of machine, so this may affect the final R2 Score.
+
+Testing with high time limit on Autogluon produces better results. My top result on kaggle was produced after 5 hours of total runtime!
+The limit is set to 400 seconds in this notebook to produce a similar result (≈ 0.46) with a more bearable runtime.
